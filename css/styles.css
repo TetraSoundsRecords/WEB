@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #0f0f0f;
+    color: #fff;
+}
+
+/* Contenedor del logo en la esquina */
+.logo-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+}
+
+.logo-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    color: #58e1c8;
+}
+
+header h1 {
+    font-size: 3em;
+    text-shadow: 0 5px 15px rgba(88, 225, 200, 0.6);
+    animation: color-shift 8s linear infinite;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #ddd;
+}
+
+/* Animación de colores */
+@keyframes color-shift {
+    0% { color: #58e1c8; }
+    25% { color: #4a90e2; }
+    50% { color: #8a2be2; }
+    75% { color: #6b5b95; }
+    100% { color: #58e1c8; }
+}
+
+/* Sección de fundadores */
+.founders {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.founders h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #58e1c8;
+}
+
+.founder {
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.founder img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.founder h3 {
+    margin-top: 15px;
+    font-size: 1.3em;
+    color: #eee;
+    transition: color 0.3s ease;
+}
+
+/* Efectos al pasar el cursor */
+.founder:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(88, 225, 200, 0.3);
+}
+
+.founder:hover h3 {
+    color: #58e1c8;
+}
+
+.founder:hover img {
+    box-shadow: 0 8px 16px rgba(88, 225, 200, 0.5);
+}
+/* Estilo de los botones */
+.button-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, #58e1c8, #4a90e2);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-link:hover {
+    background: linear-gradient(90deg, #4a90e2, #58e1c8);
+    box-shadow: 0 8px 16px rgba(88, 225, 200, 0.5);
+}
+
+.button-link:active {
+    box-shadow: 0 4px 8px rgba(88, 225, 200, 0.3);
+    transform: translateY(2px);
+}
+/* Efecto Glitch */
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+        opacity: 1;
+    }
+    20% {
+        transform: translate(-2px, -2px);
+        opacity: 0.8;
+    }
+    40% {
+        transform: translate(2px, -1px);
+        opacity: 0.9;
+    }
+    60% {
+        transform: translate(-1px, 2px);
+        opacity: 0.7;
+    }
+    80% {
+        transform: translate(1px, -2px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+#logo:hover {
+    animation: glitch 0.3s ease-in-out infinite;
+}
